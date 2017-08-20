@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Teacher to Tinkerer"
-date:   2017-08-12 16:23:26 +0000
+date:   2017-08-12 12:23:27 -0400
 ---
 
 I grew up surrounded by computers. My dad was a self-employed software engineer in the 80s (pre-Windows) and we had a behemoth of a TRS-80 on our dining room table. He coded in PASCAL and COBOL and would start compilation of his programs before dinner so they'd be ready after dinner. My brother had 3 different video game consoles and his own computer as well. I read a lot of books, wrote poetry, acted in plays, played volleyball and softball, but I never touched a computer during those years. Why? I'm not sure. I'm not aware of any particular message that told me girls don't fiddle with computers. I think it's just one of those things-- as a kid, if your friends aren't doing it, you don't get particularly interested in it. The closest I came to technology was a typing class in high school. Not 'keyboarding' on computers-- actual typing on typewriters. With ribbons and correction tape.
