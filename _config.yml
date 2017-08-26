@@ -1,6 +1,6 @@
 # Site settings
 title: golbedoc
-header-img: img/flatiron-blog.png
+header-img: img/flatiron_blog.png
 email: wwebby1@gmail.com
 copyright_name: lwebber
 description: > # this means to ignore newlines until "baseurl:"
