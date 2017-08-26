@@ -4,7 +4,7 @@ header-img: img/flatiron_blog.png
 email: wwebby1@gmail.com
 copyright_name: lwebber
 description: > # this means to ignore newlines until "baseurl:"
-  wanderings and wonderings
+  code wanderings and wonderings
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  lwebber
