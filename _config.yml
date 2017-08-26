@@ -1,0 +1,21 @@
+# Site settings
+title: golbedoc
+header-img: img/home-bg.png
+email: wwebby1@gmail.com
+copyright_name: lwebber
+description: > # this means to ignore newlines until "baseurl:"
+  wanderings and wonderings
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  lwebber
+learn_profile: lwebber
+email_username: wwebby1@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
