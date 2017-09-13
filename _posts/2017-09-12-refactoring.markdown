@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Refactoring"
-date:   2017-09-12 23:28:25 +0000
+date:   2017-09-12 19:28:26 -0400
 ---
 
 
@@ -30,7 +30,7 @@ end
 
 I tackled this problem early on in my web development bootcamp. Having done similar problems in Java as an AP Computer Science teacher, I had some familiarity with algorithms for prime numbers, but because I was a self-taught programming teacher, I had been stuck with the limited Java library given to us by the College Board. Studying Ruby explosed me to some utterly blissful coding experiences-- ways to impart the same ideas without all the extra code--like return statements and if's.
 
-A prime number is only divisible by itself and 1. My approach her was to create a range of integers from 2 up to the integer int. The expectation would be that there is only one number within that range divisible by the integer in question-- the integer itself. For the second line, I used the select! enumerator to find the number in the range divisible by the integer. This is accomplished by using the % operator to find a remainder equal to zero. I had originally used the select operator (without the "modify in place" exclamation point), but refactored because there was no need to have an intermediary local variable cluttering up the code.
+A prime number is only divisible by itself and 1. My approach here was to create a range of integers from 2 up to the integer int. The expectation would be that there is only one number within that range divisible by the integer in question-- the integer itself. For the second line, I used the select! enumerator to find the number in the range divisible by the integer. This is accomplished by using the % operator to find a remainder equal to zero. I had originally used the select operator (without the "modify in place" exclamation point), but refactored because there was no need to have an intermediary local variable cluttering up the code.
 
 Logically, if there's only one factor (the integer itself) in this selection, the number is prime.
 
