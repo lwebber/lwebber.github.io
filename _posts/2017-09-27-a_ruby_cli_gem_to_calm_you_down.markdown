@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Ruby CLI Gem to Calm You Down"
-date:   2017-09-27 13:51:02 +0000
+date:   2017-09-27 09:51:03 -0400
 ---
 
 
@@ -31,4 +31,31 @@ def self.scrape_meditations(index_url)
 ```
 
 Finally, with a reminder from a Flatiron Slack member of Tara Brach's work, I landed upon the [Insight Meditation Community of Washington's site](http://imcw.org/Talks). This one was going to work better-- dynamically updated lists of recent talks wrapped in semantic containers! It gave me the opportunity to share quality content with my users as well as to practice my Nokogiri skills with dynamic content. I used Nokogirl to scrape talks from the main list then used it again to scrape additional details from each talk.
+
+```
+#code to scrape talks from main page
+def self.scrape_talks(index_url)
+    doc = Nokogiri::HTML(open(index_url))
+    talks = doc.css(".event-item")
+
+    talks.collect do |talk|
+      talk_attributes = {
+        date: talk.css(".publish-date").text,
+        title: talk.css("h3").text,
+        url: talk.at("a")["href"]
+      }
+    end
+  end
+```
+
+```
+#code to scrape additional details about each talk
+def self.scrape_talk_details(index_url)
+    doc = Nokogiri::HTML(open(index_url))
+    talk_attributes = {
+      teacher: doc.css("#dnn_ctr466_ViewTalkDetails_hlTeacher").text,
+      description: doc.css(".text-holder").text.gsub("\r", "").gsub("\n", "").gsub("\t","")
+    }
+  end
+```
 
