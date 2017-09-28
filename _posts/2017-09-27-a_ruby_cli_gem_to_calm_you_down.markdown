@@ -59,3 +59,68 @@ def self.scrape_talk_details(index_url)
   end
 ```
 
+Once I had the scrapes working, I knew I could get the rest of the pieces to fall into place. Here's how I structured everything: 
+
+![](https://go.gliffy.com/go/share/image/s7f1bvkj6334djvbh8yq.png?utm_medium=live-embed&utm_source=custom)
+
+First, I built out breathe.rb, because that was going to be a simple, fun loop that prints out the letters BREATHE in slow motion. I needed #sleep to slow down how the #print statements executed. I also through in a little color by using the Rainbow gem:
+
+```
+breathe.each do |letter|
+        print Rainbow(letter).cyan
+        sleep(1)
+        print "."
+        sleep(1)
+        print "."
+        sleep(1)
+        print "."
+        sleep(1)
+      end
+```
+
+
+Breathe.rb has one method, #start, which is a class-level method. I wouldn't be needing to instantiate any Breathe objects to get the functionality I wanted.
+
+Next, I got to work on the classes for the talks and the guided meditations. I built each class separately, to full functionality to make sure they would work. Once that was done, I noticed a lot of redundant code so I started working on either a module or a superclass of some sort to contain the redundant code.
+
+This became challenging because the duplicate methods were class-level methods and I to do some research to figure out how to inherit class methods properly. I went back and forth between using a module and a superclass. Finally, I got a module working and blissfully removed my redundant code:
+
+```
+module Recording
+
+  module InstanceMethods
+
+    def play
+      print Rainbow("Click the link to play: #{@url}").red
+      puts ""
+    end
+  end
+
+  module ClassMethods
+
+    def create_from_collection(attributes)
+      #takes in array of attributes hashes
+      attributes.each do |attributes|
+        self.new(attributes)
+      end
+    end
+
+    def list
+      #list the meditations for the user
+      all.each_with_index { |m, index| puts "#{index + 1}. #{m.title}"}
+    end
+
+    def find(input)
+      #find a meditation by user input
+      all[input.to_i - 1]
+    end
+
+    def reset!
+      #reset all to clear the list
+      all.clear
+    end
+  end
+
+end
+
+```
