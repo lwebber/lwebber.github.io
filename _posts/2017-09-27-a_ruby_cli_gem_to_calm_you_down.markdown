@@ -6,7 +6,7 @@ permalink:  a_ruby_cli_gem_to_calm_you_down
 ---
 
 
-I built my first thing! Well, I've built lots of things, but mostly little things. Little pieces of code to practice a skill or concept. This is a real thing! 
+[I built my first thing](https://github.com/lwebber/dharma_me)! Well, I've built lots of things, but mostly little things. Little pieces of code to practice a skill or concept. This is a real thing! 
 
 The project took me a little bit longer than I expected because I really wanted to stick with my focus -- playing recent Insight Meditation talks -- rather than hunt around for an easy web page to scrape.
 
